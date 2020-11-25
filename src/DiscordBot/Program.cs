@@ -3,6 +3,11 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 namespace DiscordBot
+
+// I know that this program isn't beautiful. I know that it is just if and else, just reacting, nothing too complicated.
+// But the first time I coded with DSharp+ two days ago, and I think for that I am quite ok... It is just a simple bot, made
+// to entertain me and my friends :)
+
 {
     class Program
     {
@@ -16,7 +21,9 @@ namespace DiscordBot
         {
             var discord = new DiscordClient(new DiscordConfiguration()
         {
-            Token = "Nzc4NTM0ODgwNTQ3NzAwNzQz.X7TZHA.OIH0vi8zWw-rR4yLxyZ0_PUmEfs",
+            // The token should be secret so I obviously don't want it floating around on the internet. If you want to use this bot,
+            // just create the file discordtoken.txt in the src folder and paste your token in there. Nothing else.
+            Token = System.IO.File.ReadAllText(@"discordtoken.txt"),
             TokenType = TokenType.Bot
         });
 
@@ -62,7 +69,8 @@ namespace DiscordBot
 
         discord.MessageCreated += async e =>
         {
-            if (e.Message.Content.ToLower().StartsWith("tell rules")) 
+            if (e.Message.Content.ToLower().StartsWith("tell rules"))
+            // This rules are more or less placeholders...
             await e.Message.RespondAsync("On this server, we want everyone to be happy and enjoy the testing. We understand that testing and debugging can be fustrating, but please don't get too offensive. If you see something that shouldn't be here, contact an admin. Also, if you want to test anything NSFW, please contact us and we will make your test channel NSFW. Thanks for following the rules and have fun experimenting!");
         };
 
@@ -76,6 +84,12 @@ namespace DiscordBot
         {
             if (e.Message.Content.ToLower().StartsWith("tell help")) 
             await e.Message.RespondAsync("Here are a few commands you can try: tell joke, tell rules, tell credit. Have fun!");
+        };
+
+        discord.MessageCreated += async e =>
+        {
+            if (e.Message.Content.ToLower().StartsWith("boo!")) 
+            await e.Message.RespondAsync("WHA! Wow, that was scary...");
         };
 
         //...und mir :D
