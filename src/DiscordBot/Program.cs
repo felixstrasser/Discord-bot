@@ -23,7 +23,7 @@ namespace DiscordBot
         //code zwischen mir...
         
         Random r = new Random();
-        
+
         //you can add as many jokes as you want!
         string[] words =  { "What’s the best thing about Switzerland? I don’t know, but the flag is a big plus.",
                             "What do you call a pig that does Karate? A pork chop.",
@@ -62,8 +62,20 @@ namespace DiscordBot
 
         discord.MessageCreated += async e =>
         {
+            if (e.Message.Content.ToLower().StartsWith("tell rules")) 
+            await e.Message.RespondAsync("On this server, we want everyone to be happy and enjoy the testing. We understand that testing and debugging can be fustrating, but please don't get too offensive. If you see something that shouldn't be here, contact an admin. Also, if you want to test anything NSFW, please contact us and we will make your test channel NSFW. Thanks for following the rules and have fun experimenting!");
+        };
+
+        discord.MessageCreated += async e =>
+        {
             if (e.Message.Content.ToLower().StartsWith("tell horny")) 
             await e.Message.RespondAsync("*BONK* go to horny jail!");
+        };
+
+        discord.MessageCreated += async e =>
+        {
+            if (e.Message.Content.ToLower().StartsWith("tell help")) 
+            await e.Message.RespondAsync("Here are a few commands you can try: tell joke, tell rules, tell credit. Have fun!");
         };
 
         //...und mir :D
