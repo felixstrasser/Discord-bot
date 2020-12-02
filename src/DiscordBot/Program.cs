@@ -64,7 +64,7 @@ namespace DiscordBot
         discord.MessageCreated += async e =>
         {
             if (e.Message.Content.ToLower().StartsWith("tell credit")) 
-            await e.Message.RespondAsync("Coding by Felix Strasser, jokes found by Lukas Manee, Organisation by Danial Surmust. Written in C# using DSharpPlus. Stay creative, code on!");
+            await e.Message.RespondAsync("Coding by Felix Strasser, jokes found by Lukas Manee, organisation by Danial Surmust. Written in C# using DSharpPlus. Stay creative, code on!");
         };
 
         discord.MessageCreated += async e =>
