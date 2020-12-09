@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using DSharpPlus;
-using DSharpPlus.CommandsNext;
 namespace DiscordBot
-
-// I know that this program isn't beautiful. I know that it is just if and else, just reacting, nothing too complicated.
-// But the first time I coded with DSharp+ two days ago, and I think for that I am quite ok... It is just a simple bot, made
-// to entertain me and my friends :)
 
 {
     class Program
@@ -26,8 +21,6 @@ namespace DiscordBot
             Token = System.IO.File.ReadAllText(@"discordtoken.txt"),
             TokenType = TokenType.Bot
         });
-
-        //code zwischen mir...
         
         Random r = new Random();
 
@@ -74,8 +67,6 @@ namespace DiscordBot
             if (e.Message.Content.ToLower().StartsWith("boo!")) 
             await e.Message.RespondAsync("WHA! Wow, that was scary...");
         };
-
-        //...und mir :D
 
         await discord.ConnectAsync();
         await Task.Delay(-1);
