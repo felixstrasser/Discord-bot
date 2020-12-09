@@ -58,11 +58,11 @@ namespace DiscordBot
             if (e.Message.Content.ToLower().StartsWith("tell rules"))
             await e.Message.RespondAsync("On this server, we want everyone to be happy and enjoy the testing. We understand that testing and debugging can be fustrating, but please don't get too offensive. If you see something that shouldn't be here, contact an admin. Also, if you want to test anything NSFW, please contact us and we will make your test channel NSFW. Thanks for following the rules and have fun experimenting!");
 
-            if (e.Message.Content.ToLower().StartsWith("tell horny")) 
-            await e.Message.RespondAsync("*BONK* go to horny jail!");
+            if (e.Message.Content.ToLower().StartsWith("tell nsfw")) 
+            await e.Message.RespondAsync("https://youtu.be/Dh-CW22axyY");
 
             if (e.Message.Content.ToLower().StartsWith("tell help")) 
-            await e.Message.RespondAsync("Here are a few commands you can try: tell joke, tell rules, tell credit. Have fun!");
+            await e.Message.RespondAsync("Here are a few commands you can try: tell joke, tell rules, tell credit, tell nsfw. Have fun!");
 
             if (e.Message.Content.ToLower().StartsWith("boo!")) 
             await e.Message.RespondAsync("WHA! Wow, that was scary...");
