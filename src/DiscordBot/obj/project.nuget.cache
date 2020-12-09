@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AkkdP47EKoMon6YfTc6hg97R/53RSWLWFWh9l+F/KRnmh9JPbmXcQUzyvFCXDeYw6P+o48Pt6GpGLU38JVtlfA==",
+  "dgSpecHash": "DIys9FKk+BdT+52xIv6DYccyamyo6DcZlK+Gm3DpOLaxQqDrnbJuDk5tOPo+TkaBXN5aEyAFFmgq3n7dw6g3wQ==",
   "success": true,
   "projectFilePath": "/home/felix/projects/discordbot/src/DiscordBot/DiscordBot.csproj",
   "expectedPackageFiles": [

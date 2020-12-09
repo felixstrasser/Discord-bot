@@ -31,7 +31,6 @@ namespace DiscordBot
         
         Random r = new Random();
 
-        //you can add as many jokes as you want!
         string[] words =  { "What’s the best thing about Switzerland? I don’t know, but the flag is a big plus.",
                             "What do you call a pig that does Karate? A pork chop.",
                             "Today at the bank, an old lady asked me to check her balance. So I pushed her over.",
@@ -59,35 +58,19 @@ namespace DiscordBot
         {
             if (e.Message.Content.ToLower().StartsWith("tell joke")) 
             await e.Message.RespondAsync(words[r.Next(0, words.Length)]);
-        };
 
-        discord.MessageCreated += async e =>
-        {
             if (e.Message.Content.ToLower().StartsWith("tell credit")) 
             await e.Message.RespondAsync("Coding by Felix Strasser, jokes found by Lukas Manee, organisation by Danial Surmust. Written in C# using DSharpPlus. Stay creative, code on!");
-        };
 
-        discord.MessageCreated += async e =>
-        {
             if (e.Message.Content.ToLower().StartsWith("tell rules"))
-            // This rules are more or less placeholders...
             await e.Message.RespondAsync("On this server, we want everyone to be happy and enjoy the testing. We understand that testing and debugging can be fustrating, but please don't get too offensive. If you see something that shouldn't be here, contact an admin. Also, if you want to test anything NSFW, please contact us and we will make your test channel NSFW. Thanks for following the rules and have fun experimenting!");
-        };
 
-        discord.MessageCreated += async e =>
-        {
             if (e.Message.Content.ToLower().StartsWith("tell horny")) 
             await e.Message.RespondAsync("*BONK* go to horny jail!");
-        };
 
-        discord.MessageCreated += async e =>
-        {
             if (e.Message.Content.ToLower().StartsWith("tell help")) 
             await e.Message.RespondAsync("Here are a few commands you can try: tell joke, tell rules, tell credit. Have fun!");
-        };
 
-        discord.MessageCreated += async e =>
-        {
             if (e.Message.Content.ToLower().StartsWith("boo!")) 
             await e.Message.RespondAsync("WHA! Wow, that was scary...");
         };
